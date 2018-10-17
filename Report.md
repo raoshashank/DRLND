@@ -4,15 +4,13 @@ Note : Reward was capped at 14 for all algorithms,
 
 Here is what the trained agent looks like (Duelling Double DQN) : 
 
-![](/home/shashank/Videos/ezgif.com-video-to-gif.gif)
-
-
+![](/home/shashank/deep-reinforcement-learning/p1_navigation/other_files/Report/result.gif)
 
 ## 1) Baseline : Vanilla DQN
 
 | Reward Progression                                           |                                                              |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| ![](/home/shashank/deep-reinforcement-learning/p1_navigation/Report/dqn_tau_2.png) | ![](/home/shashank/deep-reinforcement-learning/p1_navigation/Report/dqn_tau_1.png) |
+| ![](/home/shashank/deep-reinforcement-learning/p1_navigation/other_files/Report/dqn_tau_2.png) | ![](/home/shashank/deep-reinforcement-learning/p1_navigation/other_files/Report/dqn_tau_1.png) |
 
 DQN Architecture: 2x Fc (64 units) with Relu activation 
 
@@ -20,11 +18,11 @@ DQN Architecture: 2x Fc (64 units) with Relu activation
 
 | Reward Progression                                           |                                                              |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| ![](/home/shashank/deep-reinforcement-learning/p1_navigation/Report/DDQN.png) | ![DDQN_2](/home/shashank/deep-reinforcement-learning/p1_navigation/Report/DDQN_2.png) |
+| ![](/home/shashank/deep-reinforcement-learning/p1_navigation/other_files/Report/DDQN.png) | ![DDQN_2](/home/shashank/deep-reinforcement-learning/p1_navigation/other_files/Report/DDQN_2.png) |
 
-| DQN without soft update             | Double DQN without soft update         |
-| ----------------------------------- | -------------------------------------- |
-| ![](/home/shashank/Desktop/DQN.png) | ![](/home/shashank/Desktop/DDQN_1.png) |
+| DQN without soft update                                      | Double DQN without soft update                               |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| ![](/home/shashank/deep-reinforcement-learning/p1_navigation/other_files/Report/DQN.png) | ![](/home/shashank/deep-reinforcement-learning/p1_navigation/other_files/Report/DDQN_1.png) |
 
 DQN Architecture: Same as Vanilla DQN
 
@@ -42,7 +40,7 @@ The difference is hardly appreciable. But, if we take $\tau​$ =1 and perform h
 
 | Reward Progression                                           |                                                              |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| ![](/home/shashank/deep-reinforcement-learning/p1_navigation/Report/DDDQN_2.png) | ![](/home/shashank/deep-reinforcement-learning/p1_navigation/Report/DDDQN.png) |
+| ![](/home/shashank/deep-reinforcement-learning/p1_navigation/other_files/Report/DDDQN_2.png) | ![](/home/shashank/deep-reinforcement-learning/p1_navigation/other_files/Report/DDDQN.png) |
 
 DQN Architecture: FC(64) $\rarr$FC(32) $\rarr$FC_value ( 64) + FC_Advantage(64) $\rarr$output. All having Relu activation
 
@@ -55,3 +53,7 @@ Surprisingly, Duelling Double DQNs perform similar to Vanilla DQN in terms of sp
 Probably Duelling, Double and PER will be beneficial in the case of the optional Excercise, ie; using the Camera Pixels data as input state information. 
 
 Accordingly, the future scope is to implement PER on this enviroment and All three improvements in for the optional excercise. Another potential improvement coould be tweaking the hyperparamters more for faster training.
+
+![](/home/shashank/deep-reinforcement-learning/p1_navigation/other_files/Report/DDDQN_final.png)
+
+(FInal image, for maintaining 13+ reward for 100+ epsiodes)
