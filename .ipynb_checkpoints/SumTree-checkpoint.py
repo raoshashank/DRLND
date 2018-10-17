@@ -11,7 +11,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 4,
+   "execution_count": 7,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -60,33 +60,16 @@
     "            if value<=self.tree[left_child]:\n",
     "                i = left_child                 #Follow left sub tree\n",
     "            else:\n",
-    "                value-= self.tree[left_child   # get the remainder and follow right sub tree\n",
+    "                value-= self.tree[left_child]   # get the remainder and follow right sub tree\n",
     "                i=right_child\n",
     "        #index of data and tree follows the equation tree_pointer = tree_size -1 + array_index \n",
     "        index = i + 1 - self.size\n",
-    "        return \n",
+    "        return self.data[index],self.tree[i],i\n",
     "        \n",
-    "    #def total_priority(self):\n",
+    "    def total_priority(self):\n",
     "        #get value of total priority from root node.\n",
-    "    "
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 5,
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "experiences = np.array([['E0',10],['E1',7],['E2',3],['E3',11],['E4',15],['E5',2],['E6',13],['E7',5],['E8',1],['E8',7]])"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "st = SumTree(10)"
+    "        #since the tree is a sum tree, the total priority is just the value of the root node\n",
+    "        return self.tree[0] "
    ]
   }
  ],
