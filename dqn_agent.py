@@ -91,10 +91,12 @@ class Agent():
         
         Q_targets_next = self.qnetwork_target(next_states).detach().gather(1,action_select)
         
-        Q_target = rewards + (gamma * Q_targets_next * (1 - dones))
+        Q_targets = rewards + (gamma * Q_targets_next * (1 - dones))
 
         # Get expected Q values from local model
         Q_expected = self.qnetwork_local(states).gather(1, actions)
+
+        
         
         loss = F.mse_loss(Q_target,Q_expected)
         self.optimizer.zero_grad()
